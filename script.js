@@ -30,6 +30,21 @@ function verificar() {
                 //idoso
                 img.setAttribute('src', 'idoso.png')
             }
+        } else if (fsex[1].checked) {
+            genero = 'Mulher'
+            if (idade >= 0 && idade < 10) {
+                //criança
+                img.setAttribute('src', 'menina.png')
+            } else if (idade < 21) {
+                //adolescente
+                img.setAttribute('src', 'mulher-jovem.png')
+            } else if (idade < 50) {
+                //Adulta 
+                img.setAttribute('src', 'mulher-adulta.png')
+            } else {
+                //idosa
+                img.setAttribute('src', 'idosa.png')
+            }
         }
 
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
